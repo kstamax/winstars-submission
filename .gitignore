@@ -1,0 +1,4 @@
+venv/
+airbus-ship-detection/
+__pycache__/
+kaggle.json
