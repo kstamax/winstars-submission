@@ -1,6 +1,6 @@
 <h1>U-net model for ship semantic segmentation</h1>
 <h2>Requirements</h2>
-Run files from root directory.<br />
+Run files from project root directory.<br />
 Put dataset in data/directory.<br />
 Python version - 3.11.3<br />
 <h2>Usage</h2>
@@ -20,12 +20,12 @@ Parameters:<br />
 --calculate_dice - whether or not calculate dice score for test dataset, default: False<br />
 --kaggle_submission - whether or not generate kaggle submission from test dataset, default: False<br />
 <h2>Solution Explanation</h2>
-U-net model consists of downsampling and upsampling layers. For downsampling was chosen MobileNetV2 model for it's simplicity,<br />
-to save training and evaluation time, since dataset is large. Skip connections where established from MobileNetV2 layers<br />
+U-net model consists of downsampling and upsampling layers. For downsampling was chosen MobileNetV2 model for it's simplicity, 
+to save training and evaluation time, since dataset is large. Skip connections where established from MobileNetV2 layers 
 with upsampling layers. For upsampling Conv2DTranspose layers where used.<br />
 Final output layer has sigmoid activation for binary classification of a pixel.<br />
-Dataset in skewed towards "no-ship" pixels, so half of the images not containing any ships where removed from training<br />
-process (which still didn't quite helped to prevent false-negative predictions).<br />
+Dataset in skewed towards "no-ship" pixels, so half of the images not containing any ships where removed from training 
+process (which still didn't quite help to prevent false-negative predictions).<br />
 
 <h2>Notebooks</h2>
 dataset_exploration.ipynb contains process of exploring images and their labels.<br />
