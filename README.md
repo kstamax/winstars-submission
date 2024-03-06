@@ -25,7 +25,7 @@ to save training and evaluation time, since dataset is large. Skip connections w
 with upsampling layers. For upsampling Conv2DTranspose layers where used.<br />
 Final output layer has sigmoid activation for binary classification of a pixel.<br />
 Dataset in skewed towards "no-ship" pixels, so half of the images not containing any ships where removed from training 
-process (which still didn't quite help to prevent false-negative predictions).<br />
+process (which still didn't quite help to prevent false-positive predictions).<br />
 
 <h2>Notebooks</h2>
 dataset_exploration.ipynb contains process of exploring images and their labels.<br />
